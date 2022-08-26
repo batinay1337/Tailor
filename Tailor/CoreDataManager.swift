@@ -16,7 +16,7 @@ class CoreDataManager {
     private init() {
         
         persistentContainer = NSPersistentContainer(name: "SimpleTodoModel")
-        persistentContainer.loadPersistentStores { description, error in
+        persistentContainer.loadPersistentStores { _, error in
             if let error = error {
                 fatalError("Unable to initialize Core Data \(error)")
             }
